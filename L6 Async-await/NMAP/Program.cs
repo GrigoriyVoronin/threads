@@ -17,9 +17,7 @@ namespace NMAP
             //scannerS.Scan(ipAddrs, ports).Wait();
             //Console.WriteLine(t.Elapsed.TotalSeconds);
             //t.Restart();
-            //var scannerP = new ParallelScanner();
-            //scannerP.Scan(ipAddrs, ports).Wait();
-            var scannerP = new TPLScanner();
+            var scannerP = new ParallelScanner();
             scannerP.Scan(ipAddrs, ports).Wait();
             Console.WriteLine(t.Elapsed.TotalSeconds);
         }
